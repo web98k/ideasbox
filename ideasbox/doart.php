@@ -3,7 +3,7 @@
 	$time = time();
 	$con = $_POST['content'];
 	@$uid = $_SESSION['uid'];
-	$res =$link ->query("insert into article(content,uid,time) values($con,$uid,$time)");
+	$res =$link ->query("insert into article(content,uid,time) values('$con',$uid,$time)");
 	if($res){
 		echo "<script>alert('留言成功!')</script>";
         echo '页面跳转中...';
